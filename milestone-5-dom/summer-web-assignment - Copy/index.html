@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Sale</title>
+    <!--tailwind and daisyUi link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="hero h-[40rem] bg-[#F9F6E2]">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="images/Summer 1.png" class="max-w-md rounded-lg" />
+                <div>
+                    <h2>---SALE FEVER---</h2>
+                    <h1 class="text-5xl font-bold w-96">Purchase TK 200 or above & get 20% off</h1>
+                    <p class="py-6">Use Promo Code.</p>
+                    <button class="btn btn-primary">SELL200</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex">
+        <div>
+            <div>
+                <h3 class="font-bold text-xl ms-9 mt-4">Kitchenware</h3>
+                <div class="mt-5 flex">
+                    <div id="card-1" class="card w-96  shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod1.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold" id="item-1">K. Accessories</p>
+                            <p><span id="card-1-taka">39.00</span> TK</p>
+
+                        </div>
+                    </div>
+                    <div  id="card-2" class="card w-96  shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod2.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold"  id="item-2">K. Accessories</p>
+                            <p><span  id="card-2-taka">250.00</span> TK</p>
+
+                        </div>
+                    </div>
+                    <div  id="card-3"  class="card w-96  shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod3.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold"  id="item-3">Home Cooker</p>
+                            <p><span id="card-3-taka">49.00</span> TK</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl ms-9 mt-4">Sportswear</h3>
+                <div class="mt-5 flex">
+                    <div  id="card-4"  class="card w-96 shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod4.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold"  id="item-4">Sports Back Cap</p>
+                            <p><span id="card-4-taka">49.00</span> TK</p>
+
+                        </div>
+                    </div>
+                    <div   id="card-5"  class="card w-96  shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod5.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold"  id="item-5">Full Jersey Set</p>
+                            <p><span id="card-5-taka">69.00</span> TK</p>
+
+                        </div>
+                    </div>
+                    <div  id="card-6"  class="card w-96  shadow-xl">
+                        <figure class="bg-slate-200 m-3"><img src="images/prod6.png" alt="" /></figure>
+                        <div class="card-body text-center">
+                            <p class="font-bold"  id="item-6">Sports cates</p>
+                            <p><span id="card-6-taka">159.00</span> TK</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- side bar calculation -->
+        <div class="mt-20 p-2 bg-white  ">
+            <div class="text-center shadow-xl h-24">
+                <p class="font-bold">Have coupon?</p>
+                <div class="flex">
+                    <input type="text" id="apply-input" placeholder="Type here"
+                        class="input input-bordered input-primary w-full max-w-xs" />
+                    <button id="apply-button" class="btn btn-secondary" disabled>Apply</button>
+                </div>
+            </div>
+            <!-- set name -->
+            <div id="set-name">
+
+            </div>
+            <div class="text-center shadow-xl mt-10 font-bold">
+
+                <p>Total price: <span id="total-price">00</span></p>
+                <p>Discount: <span id="discount">00</span></p>
+                <p>Total: <span id="total-end">00</span></p>
+                <hr>
+                <!-- <button id="btn-make-purchase" class="btn btn-secondary w-full" disabled>Make Purchase</button> -->
+                <div>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button id="btn-make-purchase" class="btn btn-secondary w-full" disabled
+                        onclick="my_modal_1.showModal()">MAKE PURCHASE</button>
+                    <dialog id="my_modal_1" class="modal">
+                        <div class="modal-box flex flex-col justify-center items-center">
+                            <img class="" src="images/congo.png" alt="">
+                            <h3 class="font-bold text-lg">Congratulations!</h3>
+                            <p class="py-4">Your Purchase the product</p>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button onclick="window. location. reload()" class="btn">Go Home</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+  <script src="script/common-function.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
